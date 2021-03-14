@@ -35,5 +35,11 @@ namespace Business.Concrete
         {
             _colorDal.Update(color);
         }
+     
+
+        public Color GetByColorId(int id)
+        {
+            return _colorDal.Get(co => co.ColorId == id);
+        }
     }
 }
